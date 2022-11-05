@@ -64,7 +64,7 @@ const IntegrationsGrid = ({ category, theme, count }) => {
       {
         id: -1,
         name: "All",
-        isSelected: true,
+        isSelected: false,
         count: activeIntegrationList.length
       },
       ...categoryNames.map((categoryName) => {
@@ -90,6 +90,7 @@ const IntegrationsGrid = ({ category, theme, count }) => {
     } else {
       tempCategoryList[0].isSelected = true;
     }
+    console.log(tempCategoryList);
     setcategoryNameList([...tempCategoryList]);
     setIntegrationCollection();
   };
